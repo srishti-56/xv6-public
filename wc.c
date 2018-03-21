@@ -37,6 +37,8 @@ main(int argc, char *argv[])
 {
   int fd, i;
 
+ write(1, "in main\n", 30);
+
   if(argc <= 1){
     wc(0, "");
     exit();

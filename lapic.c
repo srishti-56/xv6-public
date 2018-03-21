@@ -214,10 +214,10 @@ void cmostime(struct rtcdate *r)
 #define    CONV(x)     (t1.x = ((t1.x >> 4) * 10) + (t1.x & 0xf))
     CONV(second);
     CONV(minute);
-    CONV(hour  );
-    CONV(day   );
-    CONV(month );
-    CONV(year  );
+    CONV(hour);
+    CONV(day);
+    CONV(month);
+    CONV(year);
 #undef     CONV
   }
 

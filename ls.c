@@ -22,6 +22,7 @@ fmtname(char *path)
   return buf;
 }
 
+
 void
 ls(char *path)
 {
@@ -74,12 +75,13 @@ int
 main(int argc, char *argv[])
 {
   int i;
-
   if(argc < 2){
     ls(".");
     exit();
   }
   for(i=1; i<argc; i++)
     ls(argv[i]);
-  exit();
+
+
+ exit();
 }

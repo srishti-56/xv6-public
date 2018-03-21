@@ -7,6 +7,7 @@
 #include "mmu.h"
 #include "proc.h"
 
+
 int
 sys_fork(void)
 {
@@ -88,4 +89,24 @@ sys_uptime(void)
   xticks = ticks;
   release(&tickslock);
   return xticks;
+}
+
+int
+sys_dob(void)
+{
+ return(605) ;
+}
+
+
+
+
+int 
+sys_gettime(void){
+  
+  struct rtcdate* r;
+
+  argptr(0, (void*)&r, sizeof(&r));
+
+  cmostime(r);
+  return 0;
 }
